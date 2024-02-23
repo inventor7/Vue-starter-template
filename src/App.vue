@@ -1,5 +1,5 @@
 <template>
-  <RouterView />
+  <RouterView :dir="$i18n.locale === 'ar' ? 'rtl' : 'ltr'" />
 </template>
 
 <script setup>

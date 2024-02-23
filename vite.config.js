@@ -1,4 +1,6 @@
 import { fileURLToPath, URL } from "node:url";
+import path from "path"
+
 import Icons from "unplugin-icons/vite";
 
 import VueRouter from "unplugin-vue-router/vite";
@@ -29,9 +31,9 @@ export default defineConfig({
       resolvers: [
         IconsResolver({
           prefix: false,
-          alias : {
-            ms :"material-symbols"
-            
+          alias: {
+            ms: "material-symbols"
+
           }
         }),
       ],
@@ -153,7 +155,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 });
